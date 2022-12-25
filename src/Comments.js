@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import uniqid from 'uniqid';
 import { commentCreate, commentLoad } from './redux/actions';
-import { commentsReducer } from './redux/commentsReducer';
+// import { commentsReducer } from './redux/commentsReducer';
 import SingleComment from './SingleComment'
 
 function Comments(props) {
@@ -25,7 +25,7 @@ function Comments(props) {
 
     useEffect(() => {
         dispatch(commentLoad());
-    }, [])
+    }, [dispatch])
 
     return (
         <div className="card-comments">
